@@ -139,7 +139,7 @@ body, html {
 .cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[1];
+  -ms-grid-columns: (1fr);
       grid-template-columns: repeat(1, 1fr);
   -webkit-column-gap: 2rem;
           column-gap: 2rem;
@@ -160,8 +160,6 @@ body, html {
   width: 100%;
   border: transparent solid 0px;
   border-radius: 1rem 1rem 0 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -271,7 +269,6 @@ body, html {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 0.5rem;
-  font-weight: normal;
 }
 
 .menuItem {
@@ -328,7 +325,7 @@ body, html {
 
 .menuItem__validation {
   background-color: #99E2D0;
-  margin: -1rem -5rem -1rem 1rem;
+  margin: 0 -5rem 0 1rem;
   width: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
