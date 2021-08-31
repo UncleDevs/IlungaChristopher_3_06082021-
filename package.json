@@ -1,0 +1,20 @@
+{
+  "name": "projet3oc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UncleDevs/IlungaChristopher_3_06082021-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UncleDevs/IlungaChristopher_3_06082021-/issues"
+  },
+  "homepage": "https://github.com/UncleDevs/IlungaChristopher_3_06082021-#readme"
+}

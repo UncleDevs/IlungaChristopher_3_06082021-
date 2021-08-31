@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+.header {
+  &__logo {
+    font-family: "Shrikhand";
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+    position: relative;
+  }
+}
+
+.footer {
+  background-color: #353535;
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  &__logo {
+    color: white;
+    font-family: "Shrikhand";
+    margin: 0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__listmarg {
+    margin-top: 0.5rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+  }
+
+  &__icon {
+    margin-right: 1rem;
+    width: 0.8rem;
+  }
+}
