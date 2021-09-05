@@ -42,7 +42,35 @@
     &__title {
       font-family: "Shrikhand";
     }
+
+    &__btn {
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: transparent 0px solid;
+    padding: 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor: pointer;
+    position: relative;
+    background-color: black;
+    }
   
+    &__like {
+      transition-duration: .25s;
+      background-color: #f6f6f6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      mix-blend-mode: lighten;
+    }
+
   }
   
   .submenus {
@@ -111,4 +139,39 @@
       align-items:center;
       justify-content:center;
     }
+
+    &:hover &__validation {
+      margin-right: -1rem;
+    }
+
+    &__wrapIcon {
+      height: 1.6rem;
+      width: 1.6rem;
+      background-color: white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 100px;
+      transform: rotate(180deg);
+      transition-duration: 0.5s;
+    }
+
+    &:hover &__wrapIcon {
+      transform: rotate(0);
+    }
+
+    &__icon {
+      color: $color-tertiary;
+    }
+  }
+
+  .orderBtn {
+    display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding: 3rem 0;
+  }
+
+  .commandBtn {
+    @include button(primary);
   }

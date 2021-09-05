@@ -4,7 +4,19 @@ body, html {
     scroll-behavior: smooth;
   }
 
-  
+@mixin button($type) {
+  padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: white;
+    background: linear-gradient($color-secondary, $color-primary);
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition-duration: 0.25s;
+    
+}
+
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
