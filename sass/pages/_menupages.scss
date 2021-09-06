@@ -18,25 +18,29 @@
     }
   }
   
-  
+main {
+  background-color: #f6f6f6;
+}
   .restoImg {
     max-width: 100%;
     max-height: 32rem;
     width: 100%;
     object-fit: cover;
+    
   }
   
   .menu {
     margin-top: -4rem;
+    margin-bottom: -2rem;
     border-radius: 2rem 2rem 0 0;
     background-color: #f6f6f6;
     position: relative;
   
     &__header {
-      padding: 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-right: 1rem;
     }
   
     &__title {
@@ -55,14 +59,26 @@
     cursor: pointer;
     position: relative;
     background-color: black;
+    
+
+    &:hover::before {
+      opacity: 1;
     }
-  
+
+    &::before {
+      opacity: 0;
+      transition: 0.5s;
+      content: "";
+      height: 100%;
+      width: 100%;
+      background:linear-gradient($color-primary,$color-secondary);
+    }
+  }
+
     &__like {
       transition-duration: .25s;
       background-color: #f6f6f6;
       position: absolute;
-      top: 0;
-      left: 0;
       height: 100%;
       width: 100%;
       display:flex;
@@ -71,22 +87,42 @@
       mix-blend-mode: lighten;
     }
 
+    &__btn:hover {
+      .menu__like {
+        &--noBg {
+          opacity: 0;
+        }
+      }
+    }
   }
   
   .submenus {
     display: grid;
+    
   }
   
   .submenu {
     max-width: 100%;
     overflow: hidden;
     padding: 0 1rem;
+    
+
   
     &__title {
       text-transform: uppercase;
       position: relative;
       padding-bottom: 0.5rem;
-      
+      font-weight: 300;
+
+      &::after {
+        content: "";
+        width: 3rem;
+        height: 0.25rem;
+        background-color: $color-tertiary;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
     }
   }
   
@@ -100,8 +136,11 @@
     overflow: hidden;
     cursor: pointer;
     max-width: 100%;
+    animation: appear 1.2s;
+    animation-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    animation-fill-mode: both;
     
-  
+    
     &__header {
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -133,7 +172,7 @@
   
     &__validation {
       background-color: $color-tertiary;
-      margin: 0 -5rem 0 1rem;
+      margin: -1rem -5rem -1rem 1rem;
       width: 4rem;
       display:flex;
       align-items:center;
@@ -142,6 +181,7 @@
 
     &:hover &__validation {
       margin-right: -1rem;
+      transition-duration: 0.5s;
     }
 
     &__wrapIcon {
@@ -167,11 +207,11 @@
 
   .orderBtn {
     display: flex;
-  text-decoration: none;
-  justify-content: center;
-  padding: 3rem 0;
+    justify-content: center;
+    padding: 3rem 0;
   }
 
   .commandBtn {
     @include button(primary);
+    margin-bottom: 1.5rem;
   }
