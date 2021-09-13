@@ -79,11 +79,6 @@ main {
       transition-duration: .25s;
       background-color: #f6f6f6;
       position: absolute;
-      height: 100%;
-      width: 100%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
       mix-blend-mode: lighten;
     }
 
@@ -214,4 +209,21 @@ main {
   .commandBtn {
     @include button(primary);
     margin-bottom: 1.5rem;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .container {
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    .submenus {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1280px;
+      margin: auto;
+    }
+    
   }
