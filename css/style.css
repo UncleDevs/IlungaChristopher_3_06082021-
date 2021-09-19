@@ -325,12 +325,8 @@ main {
 .menu__btn {
   height: 2rem;
   width: 2rem;
-  padding: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
-  position: relative;
   background-color: black;
 }
 .menu__btn:hover::before {
@@ -338,14 +334,14 @@ main {
 }
 .menu__btn::before {
   opacity: 0;
-  transition: 0.5s;
   content: "";
+  transition: 0.5s;
   height: 100%;
   width: 100%;
   background: linear-gradient(#9356DC, #FF79DA);
 }
 .menu__like {
-  transition-duration: 0.25s;
+  transition-duration: 0.5s;
   background-color: #f6f6f6;
   position: absolute;
   mix-blend-mode: lighten;
